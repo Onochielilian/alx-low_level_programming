@@ -13,7 +13,7 @@ int j = 0;
 char temp;
 
 while (*(n + i) != '\0')
-}
+{
 i++;
 }
 i--;
