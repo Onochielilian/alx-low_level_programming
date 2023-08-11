@@ -11,37 +11,37 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int j;
+unsigned int i;
 unsigned int s1len = 0;
 unsigned int s2len = 0;
-char *a;
-if s1 == NULL
+char *output;
+if (s1 == NULL)
 s1 = "";
 
-if s2 == NULL
+if (s2 == NULL)
 s2 = "";
-for (j = 0; s1[j] != '\0'; j++)
+for (i = 0; s1[i] != '\0'; i++)
 s1len++;
-for (j = 0; s2[j] != '\0'; j++)
+for (i = 0; s2[i] != '\0'; i++)
 s2len++;
-a = malloc(size of(char) * (s1len + n) + 1);
-if (a == NULL)
+output = malloc(sizeof(char) * (s1len + n) + 1);
+if (output == NULL)
 return (NULL);
 if (n >= s2len)
 {
-for (j = 0; s1[j] != '\0'; j++)
-a[j] = s1[j];
-for (j = 0; s2[j] != '\0'; j++)
-a[s1len + j] = s2[j];
-a[s1len + j] = '\0';
+for (i = 0; s1[i] != '\0'; i++)
+output[i] = s1[i];
+for (i = 0; s2[i] != '\0'; i++)
+output[s1len + i] = s2[i];
+output[s1len + i] = '\0';
 }
 else
 {
-for (j = 0; s1[j] != '\0'; j++)
-a[j] = s1[j];
-for (j = 0; j < n; j++)
-a[s1len + j] s2[j];
-a[s1len + j] = '\0';
+for (i = 0; s1[i] != '\0'; i++)
+output[i] = s1[i];
+for (i = 0; i < n; i++)
+output[s1len + i] = s2[i];
+output[s1len + i] = '\0';
 }
-return (a);
+return (output);
 }
